@@ -46,7 +46,7 @@ export function Chat({
     initialMessages,
     experimental_throttle: 100,
     onFinish: () => {
-      mutate('/api/history');
+      mutate('/api/history');//重新获取用户的历史记录并更新到缓存中，保证前端数据和后端状态同步
     },
   });
 

@@ -45,7 +45,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
         id={chat.id}
         initialMessages={convertToUIMessages(messagesFromDb)}
         selectedModelId={selectedModelId}
-        selectedVisibilityType={chat.visibility}
+        selectedVisibilityType={chat.visibility}//private" | "public
         isReadonly={session?.user?.id !== chat.userId}
       />
       <DataStreamHandler id={id} />
